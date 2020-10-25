@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <!-------------------nabvar------------------->
+    <nav id="topnav">
+        <img id="navimg" src="/res/2-books-png-image.png" alt="Logo">
+        <p>Books store</p>
+        <ul id="navlist">
+            <li>Science Fiction</li>
+            <li>Mistery & Detective</li>
+            <li>Humorous</li>
+            <li>Historical</li>
+        </ul>
+        <input id="navinput" type="search" value="Search">
+        <button id="navsearch">Search</button>
+    </nav>
+    <!-------------------nabvar------------------->
+
+
+    <!-------------------main------------------->
+    <main>
+        <!-------------------books------------------->
+        <div id="books">
+            <div id="book1" class="book">
+                <span class="shop-item-title">Children of ruin</span>
+                <br>
+                <img class="shop-item-image" src="https://cdn.mos.cms.futurecdn.net/uGXeJjTy6pTGZeNBxQseJN-1200-80.jpg" alt="book01">
+                <br>
+                <button class="bouton-livre" onclick="add('Children of ruin' , '15' , 'https://cdn.mos.cms.futurecdn.net/uGXeJjTy6pTGZeNBxQseJN-1200-80.jpg')"> Add to cart <i class="fas fa-cart-plus"  ></i></button>
+                <button class="bouton-livre" id="favoritIcon" onclick="colorize()"> Add to favorite <i class="fas fa-star shop-item-button" aria-hidden="true"></i></button>
+                <br>
+                <div class="shop-item-details">
+                    <p class="p1">Price in TND:</p>
+                    <p class="shop-item-price">15</p>
+                    <button class="bouton" id="btn1" onclick="dec1()">-</button>
+                    <input id="inputcart1" value="0">
+                    <button class="bouton" id="btn2" onclick="inc1()">+</button>
+                </div>
+            </div>
+            <div id="book2" class="book">
+                <span class="shop-item-title">Sherlock Holmes</span>
+                <br>
+                <img class="shop-item-image" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1359985122l/16160621.jpg" alt="book02">
+                <br>
+                <button class="bouton-livre" onclick="add('Sherlock Holmes' , '20' , 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1359985122l/16160621.jpg')"> Add to cart <i class="fas fa-cart-plus"></i></button>
+                <button class="bouton-livre" id="favoritIcon2" onclick="colorize2()"> Add to favorite <i class="fas fa-star" ></i></button>
+                <br>
+                <p class="p1">Price in TND:</p>
+                <p class="shop-item-price">20</p>
+                <button class="bouton" id="btn3" onclick="dec2()">-</button>
+                    <input id="inputcart2" value="0">
+                    <button class="bouton" id="btn4" onclick="inc2()">+</button>
+            </div>
+            <div id="book3" class="book">
+                <span class="shop-item-title">Crazy rich asians</span>
+                <br>
+                <img class="shop-item-image" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/4f71bf5edac16fbb6f5a4c7b3d65a1f6-1506640493.jpg?crop=1xw:1xh;center,top&resize=480:*" alt="book03">
+                <br>
+                <button class="bouton-livre" onclick="add('Crazy rich asians' , '18' , 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/4f71bf5edac16fbb6f5a4c7b3d65a1f6-1506640493.jpg?crop=1xw:1xh;center,top&resize=480:*')"> Add to cart <i class="fas fa-cart-plus"></i></button>
+                <button class="bouton-livre" id="favoritIcon3" onclick="colorize3()"> Add to favorite <i class="fas fa-star"></i></button>
+                <br>
+                <p class="p1">Price in TND:</p>
+                <p class="shop-item-price">18</p>
+                <button class="bouton" id="btn5" onclick="dec3()">-</button>
+                    <input id="inputcart3" value="0">
+                    <button class="bouton" id="btn6" onclick="inc3()">+</button>
+            </div>
+            <div id="book4" class="book">
+                <span class="shop-item-title">Blood & Sugar</span>
+                <br>
+                <img class="shop-item-image" src="https://images-na.ssl-images-amazon.com/images/I/81KN8Fs7JlL.jpg" alt="book04">
+                <br>
+                <button class="bouton-livre" onclick="add('Blood & Sugar' , '13' , 'https://images-na.ssl-images-amazon.com/images/I/81KN8Fs7JlL.jpg')"> Add to cart <i class="fas fa-cart-plus"></i></button>
+                <button class="bouton-livre" id="favoritIcon4" onclick="colorize4()"> Add to favorite <i class="fas fa-star"></i></button>
+                <br>
+                <p class="p1">Price in TND:</p>
+                <p class="shop-item-price">13</p>
+                <button class="bouton" id="btn7" onclick="dec4()">-</button>
+                    <input id="inputcart4" value="0">
+                    <button class="bouton" id="btn8" onclick="inc4()">+</button>
+            </div>
+        </div>
+        <!-------------------books------------------->
+
+        <div class="border">   <img class="img" src="https://image.flaticon.com/icons/svg/25/25619.svg" alt="panier"> <span class="ship">My cart</span> 
+        </div>
+
+        <!-------------------newdiv------------------->
+        <div id="newDivCart" class="newDivCart">
+
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">0</span>
+        </div>
+    </main>
+    <!-------------------main------------------->
+</body>
+<script src="https://kit.fontawesome.com/06b6a837d2.js" crossorigin="anonymous"></script>
+<script src="/JS/script.js"></script>
+</html>
